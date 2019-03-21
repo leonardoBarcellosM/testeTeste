@@ -21,14 +21,14 @@ namespace Automacao_xUnit.tests.steps
             string path = $"{currentPath}/../../../WebDriverLinux";
 
 
-            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
-            {
-                path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
-            }
-            else
-            {
-                path = $"{currentPath}/../../../WebDriverLinux";
-            }
+            //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            //{
+            //    path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
+            //}
+            //else
+            //{
+            //    path = $"{currentPath}/../../../WebDriverLinux";
+            //}
 
             try
             {
