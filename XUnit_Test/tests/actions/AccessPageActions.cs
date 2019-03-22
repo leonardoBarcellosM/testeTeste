@@ -19,7 +19,7 @@ namespace XUnit_Test.tests.steps
             bool _result = false;
 
             var currentPath = Directory.GetCurrentDirectory();
-            string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
+            string path = $"{currentPath}/../../../WebDriverLinux";
             Driver = new ChromeDriver(path);
 
             //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
