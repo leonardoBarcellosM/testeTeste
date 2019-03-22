@@ -4,13 +4,13 @@ using System.Drawing;
 using System.Globalization;
 using System.Threading;
 
-namespace Automacao_xUnit.tests.steps
+namespace XUnit_Test.tests.steps
 {
     class ClassUtilities
     {
-        private IJavaScriptExecutor js;
-        private string screenshots;
-        private int Cont = 0;
+        //private IJavaScriptExecutor js;
+        //private string screenshots;
+        //private int Cont = 0;
 
         public bool WaitForElementVisible(IWebElement element, int timeoutSecond)
         {
@@ -35,36 +35,36 @@ namespace Automacao_xUnit.tests.steps
         }
 
 
-        public void ScrollElementoPage(IWebElement element)
-        {
-            try
-            {
+        //public void ScrollElementoPage(IWebElement element)
+        //{
+        //    try
+        //    {
 
-                Point point = new Point();
+        //        Point point = new Point();
 
-                if (element != null)
-                {
-                    point = element.Location;
-                    IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
+        //        if (element != null)
+        //        {
+        //            point = element.Location;
+        //            IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
 
-                    js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
+        //            js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
 
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //    }
+        //}
 
 
-        public void ScrollPage(int num)
-        {
-            int scroll = num * 300;
+        //public void ScrollPage(int num)
+        //{
+        //    int scroll = num * 300;
 
-            js = (IJavaScriptExecutor)ClassDriver.GetInstance().Driver;
-            js.ExecuteScript("window.scrollBy(0, "+ scroll +")", "");
+        //    js = (IJavaScriptExecutor)ClassDriver.GetInstance().Driver;
+        //    js.ExecuteScript("window.scrollBy(0, "+ scroll +")", "");
 
-        }
+        //}
 
 
         internal void ClickJS()
@@ -79,19 +79,19 @@ namespace Automacao_xUnit.tests.steps
         }
 
 
-        public void SendKeyJS(IWebElement element, string value)
-        {
-            try
-            {
-                IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
-                js.ExecuteScript("arguments[0].setAttribute('value', '" + value + "')", element);
-            }
-            catch (Exception)
-            {
+        //public void SendKeyJS(IWebElement element, string value)
+        //{
+        //    try
+        //    {
+        //        IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
+        //        js.ExecuteScript("arguments[0].setAttribute('value', '" + value + "')", element);
+        //    }
+        //    catch (Exception)
+        //    {
 
-            }
+        //    }
 
-        }
+        //}
 
 
         public class Credentials
@@ -106,28 +106,28 @@ namespace Automacao_xUnit.tests.steps
             return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
         }
 
-        //Pegar conteúdo de uma variável Local
-        public static String getItemFromLocalStorage(String key)
-        {
-            IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
+        ////Pegar conteúdo de uma variável Local
+        //public static String getItemFromLocalStorage(String key)
+        //{
+        //    IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
 
-            return (String)js.ExecuteScript(String.Format(
-                "return window.localStorage.getItem('tokenPES');", key));
-        }
+        //    return (String)js.ExecuteScript(String.Format(
+        //        "return window.localStorage.getItem('tokenPES');", key));
+        //}
 
 
-        public void ClickJS(IWebElement element)
-        {
-            try
-            {
-                IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
-                js.ExecuteScript("arguments[0].click()", element);
-            }
-            catch (Exception)
-            {
+        //public void ClickJS(IWebElement element)
+        //{
+        //    try
+        //    {
+        //        IJavaScriptExecutor js = ClassDriver.GetInstance().Driver as IJavaScriptExecutor;
+        //        js.ExecuteScript("arguments[0].click()", element);
+        //    }
+        //    catch (Exception)
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
 
         public void HoverMenu(IWebDriver driver, IWebElement element)
@@ -146,13 +146,13 @@ namespace Automacao_xUnit.tests.steps
         }
 
 
-        public void ScreenshotPrepare()
-        {
-            screenshots = @"C:\Users\leonardo.barcellos\Desktop\Screenshots\";
-            CultureInfo cult = new CultureInfo("pt-BR");
-            string dta = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", cult);
-            Screenshot(ClassDriver.GetInstance().Driver, screenshots + "ComeceAgora_" + Cont++ + ".png");
-        }
+        //public void ScreenshotPrepare()
+        //{
+        //    screenshots = @"C:\Users\leonardo.barcellos\Desktop\Screenshots\";
+        //    CultureInfo cult = new CultureInfo("pt-BR");
+        //    string dta = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", cult);
+        //    Screenshot(ClassDriver.GetInstance().Driver, screenshots + "ComeceAgora_" + Cont++ + ".png");
+        //}
 
 
         public void Screenshot(IWebDriver driver, string screenshotPasta)

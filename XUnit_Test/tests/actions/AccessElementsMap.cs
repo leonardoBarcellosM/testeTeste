@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Automacao_xUnit.tests.steps
+namespace XUnit_Test.tests.steps
 {
     class AccessElementsMap
     {

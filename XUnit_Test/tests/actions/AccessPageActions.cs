@@ -6,12 +6,13 @@ using System.IO;
 using System.Threading;
 using Xunit;
 
-namespace Automacao_xUnit.tests.steps
+namespace XUnit_Test.tests.steps
 {
     class AcessPageActions : AccessElementsMap
     {
         private ClassUtilities util = new ClassUtilities();
-        private IWebDriver Driver;
+        public IWebDriver Driver;
+        
 
         public bool AccessPage(string url)
         {
@@ -19,7 +20,7 @@ namespace Automacao_xUnit.tests.steps
 
             var currentPath = Directory.GetCurrentDirectory();
             string path = $"{currentPath}/../../../WebDriverLinux";
-
+            Driver = new ChromeDriver(path);
 
             //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             //{
@@ -32,7 +33,7 @@ namespace Automacao_xUnit.tests.steps
 
             try
             {
-                Driver = new ChromeDriver(path);
+                
 
                 Driver.Navigate().GoToUrl(url);
                 _result = true;
@@ -50,7 +51,7 @@ namespace Automacao_xUnit.tests.steps
             bool _result = false;
             try
             {
-                IWebElement LogoHome = ClassDriver.GetInstance().Driver.FindElement(By.XPath("//div//a[@class='logo']"));
+                IWebElement LogoHome = Driver.FindElement(By.XPath("//div//a[@class='logo']"));
                 util.WaitForElementVisible(LogoHome, 25);
                 if (LogoHome.Displayed)
                 {
@@ -65,6 +66,8 @@ namespace Automacao_xUnit.tests.steps
             {
             }
             return _result;
+
+            Driver.Quit();
         }
 
         public bool ValidarAcessoIes()
@@ -73,7 +76,7 @@ namespace Automacao_xUnit.tests.steps
             try
             {
                 Thread.Sleep(10000);
-                IWebElement formLogin = ClassDriver.GetInstance().Driver.FindElement(By.Id("formLogin"));
+                IWebElement formLogin = Driver.FindElement(By.Id("formLogin"));
                 util.WaitForElementVisible(formLogin, 15);
                 if (formLogin.Displayed)
                 {

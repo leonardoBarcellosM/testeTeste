@@ -1,7 +1,7 @@
 ﻿using TechTalk.SpecFlow;
 using Xunit;
 
-namespace Automacao_xUnit.tests.steps
+namespace XUnit_Test.tests.steps
 {
     [Binding]
     public class AccessSteps
@@ -22,6 +22,8 @@ namespace Automacao_xUnit.tests.steps
             var result = pageActions.ValidAccessPage();
 
             Assert.True(result, "Erro ao acessar a endereço solicitado");
+
+            
         }
        
     }

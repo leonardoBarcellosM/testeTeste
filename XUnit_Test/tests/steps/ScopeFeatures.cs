@@ -1,6 +1,6 @@
 ﻿using TechTalk.SpecFlow;
 
-namespace Automacao_xUnit.tests.steps
+namespace XUnit_Test.tests.steps
 {
     [Binding]
     class ScopeFeatures
