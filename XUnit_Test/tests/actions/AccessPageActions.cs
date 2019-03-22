@@ -1,10 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.ComponentModel;
 using System.IO;
 using System.Threading;
-using Xunit;
 
 namespace XUnit_Test.tests.steps
 {
@@ -20,6 +18,10 @@ namespace XUnit_Test.tests.steps
 
             var currentPath = Directory.GetCurrentDirectory();
             string path = $"{currentPath}/../../../WebDriverLinux/";
+
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--window-size=1800,2000", "--headless", "--disable-gpu", "--no-sandbox");
+            Driver = new ChromeDriver(path, options);
 
             Driver = new ChromeDriver(path);
 

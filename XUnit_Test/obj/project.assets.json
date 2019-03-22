@@ -638,6 +638,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Selenium.Chrome.WebDriver/2.45.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.Chrome.WebDriver.targets": {}
+        }
+      },
       "Selenium.Support/3.141.0": {
         "type": "package",
         "dependencies": {
@@ -2811,6 +2817,19 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.0.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "Selenium.Chrome.WebDriver/2.45.0": {
+      "sha512": "EFXyAELxSa3xZydxtY1E0zcyqLcaYg/ov6POSWG4ZW6tR/jyANwmlz69DQCGDF8FXToKgI0y6PqZrO9IbtBKDw==",
+      "type": "package",
+      "path": "selenium.chrome.webdriver/2.45.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.Chrome.WebDriver.targets",
+        "driver/chromedriver.exe",
+        "selenium.chrome.webdriver.2.45.0.nupkg.sha512",
+        "selenium.chrome.webdriver.nuspec"
       ]
     },
     "Selenium.Support/3.141.0": {
@@ -6421,6 +6440,7 @@
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NET.Test.Sdk >= 16.0.1",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Selenium.Chrome.WebDriver >= 2.45.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.ChromeDriver >= 74.0.3729.6-beta",
@@ -6481,6 +6501,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Selenium.Chrome.WebDriver": {
+            "target": "Package",
+            "version": "[2.45.0, )"
           },
           "Selenium.Support": {
             "target": "Package",
