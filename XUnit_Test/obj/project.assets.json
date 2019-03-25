@@ -668,12 +668,6 @@
           "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/74.0.3729.6-beta": {
-        "type": "package",
-        "build": {
-          "build/Selenium.WebDriver.ChromeDriver.targets": {}
-        }
-      },
       "SpecFlow/3.0.178-beta": {
         "type": "package",
         "dependencies": {
@@ -2868,21 +2862,6 @@
         "lib/netstandard2.0/WebDriver.xml",
         "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
-      ]
-    },
-    "Selenium.WebDriver.ChromeDriver/74.0.3729.6-beta": {
-      "sha512": "j5SBQHJzj7Gb5xNYqCVYiBJ1U+vLh1jXAjUZsCHi1D8U43dknSEu2Vhy/4Zx4cLueSO1ramzi0tKa6rAk980ZA==",
-      "type": "package",
-      "path": "selenium.webdriver.chromedriver/74.0.3729.6-beta",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Selenium.WebDriver.ChromeDriver.targets",
-        "driver/linux64/chromedriver",
-        "driver/mac64/chromedriver",
-        "driver/win32/chromedriver.exe",
-        "selenium.webdriver.chromedriver.74.0.3729.6-beta.nupkg.sha512",
-        "selenium.webdriver.chromedriver.nuspec"
       ]
     },
     "SpecFlow/3.0.178-beta": {
@@ -6443,7 +6422,6 @@
       "Selenium.Chrome.WebDriver >= 2.45.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
-      "Selenium.WebDriver.ChromeDriver >= 74.0.3729.6-beta",
       "SpecFlow >= 3.0.178-beta",
       "SpecFlow.Tools.MsBuild.Generation >= 3.0.178-beta",
       "SpecFlow.xUnit >= 3.0.178-beta",
@@ -6513,10 +6491,6 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[3.141.0, )"
-          },
-          "Selenium.WebDriver.ChromeDriver": {
-            "target": "Package",
-            "version": "[74.0.3729.6-beta, )"
           },
           "SpecFlow": {
             "target": "Package",

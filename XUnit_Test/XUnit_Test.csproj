@@ -11,7 +11,6 @@
     <PackageReference Include="Selenium.Chrome.WebDriver" Version="2.45.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="74.0.3729.6-beta" />
     <PackageReference Include="SpecFlow" Version="3.0.178-beta" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.178-beta" />
     <PackageReference Include="SpecFlow.xUnit" Version="3.0.178-beta" />

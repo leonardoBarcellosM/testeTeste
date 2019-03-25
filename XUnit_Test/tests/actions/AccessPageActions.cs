@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.IO;
 using System.Threading;
@@ -17,13 +18,12 @@ namespace XUnit_Test.tests.steps
             bool _result = false;
 
             var currentPath = Directory.GetCurrentDirectory();
-            string path = $"{currentPath}/../../../WebDriverLinux/";
+            //string path = $"{currentPath}/../../../WebDriverLinux/";
+            string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
 
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--window-size=1800,2000", "--headless", "--disable-gpu", "--no-sandbox");
             Driver = new ChromeDriver(path, options);
-
-            Driver = new ChromeDriver(path);
 
             //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             //{
