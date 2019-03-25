@@ -18,8 +18,8 @@ namespace XUnit_Test.tests.steps
             bool _result = false;
 
             var currentPath = Directory.GetCurrentDirectory();
-            //string path = $"{currentPath}/../../../WebDriverLinux/";
-            string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
+            string path = $"{currentPath}/../../../WebDriverLinux/";
+            //string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
 
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--window-size=1800,2000", "--headless", "--disable-gpu", "--no-sandbox");
@@ -36,8 +36,6 @@ namespace XUnit_Test.tests.steps
 
             try
             {
-                
-
                 Driver.Navigate().GoToUrl(url);
                 _result = true;
             }
