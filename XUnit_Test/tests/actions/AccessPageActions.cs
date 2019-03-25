@@ -11,25 +11,25 @@ namespace XUnit_Test.tests.steps
     {
         private ClassUtilities util = new ClassUtilities();
         public IWebDriver Driver;
-        
 
-        public bool AccessPage(string url)
+
+    public bool AccessPage(string url)
         {
             bool _result = false;
 
             var currentPath = Directory.GetCurrentDirectory();
-            string path = "/usr/bin/";
+            string path = "/usr/bin/chromedriver";
             //string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
 
             ChromeOptions options = new ChromeOptions();
-            options.AddArguments("start-maximized"); // open Browser in maximized mode
-            options.AddArguments("disable-infobars"); // disabling infobars
-            options.AddArguments("--disable-extensions"); // disabling extensions
+            //options.AddArguments("start-maximized"); // open Browser in maximized mode
+            //options.AddArguments("disable-infobars"); // disabling infobars
+            //options.AddArguments("--disable-extensions"); // disabling extensions
             options.AddArguments("--disable-gpu"); // applicable to windows os only
             options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.AddArguments("--no-sandbox"); // Bypass OS security model
+            options.AddArguments("--headless");
             Driver = new ChromeDriver(path, options);
-            
 
             //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             //{
