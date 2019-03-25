@@ -18,7 +18,7 @@ namespace XUnit_Test.tests.steps
             bool _result = false;
 
             var currentPath = Directory.GetCurrentDirectory();
-            string path = "/usr/bin/chromedriver";
+            string path = "/usr/bin/";
             //string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
 
             ChromeOptions options = new ChromeOptions();
