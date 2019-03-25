@@ -22,7 +22,7 @@ namespace XUnit_Test.tests.steps
             //string path = $"{currentPath}\\..\\..\\..\\WebDriverWindows";
 
             ChromeOptions options = new ChromeOptions();
-            options.AddArguments("--disable-dev-shm-usage","--window-size=1800,2000", "--headless", "--no-sandbox");
+            options.AddArguments("--disable-dev-shm-usage");
             Driver = new ChromeDriver(path, options);
 
             //if (Environment.OSVersion.Platform == PlatformID.Win32NT)
