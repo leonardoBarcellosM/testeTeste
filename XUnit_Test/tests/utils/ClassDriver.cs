@@ -46,7 +46,7 @@ namespace XUnit_Test.tests.steps
             options.AddArguments("--no-sandbox"); // Bypass OS security model
             options.AddArguments("--disable-gpu"); // applicable to windows os only
             options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-            options.AddArguments("--headless");
+            //options.AddArguments("--headless");
             driver = new ChromeDriver(path, options);
 
             Driver.Manage().Window.Maximize();
